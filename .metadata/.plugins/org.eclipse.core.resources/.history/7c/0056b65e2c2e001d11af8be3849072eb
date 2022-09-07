@@ -1,0 +1,10 @@
+package saw243_Assignment1;
+
+public class pythagoreanTheorem {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
