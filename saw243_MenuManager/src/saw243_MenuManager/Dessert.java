@@ -15,23 +15,29 @@ public class Dessert {
 
 	public String getName() {
 		if(this.name == null){
-			return "No Dessert";
+			return "N/A";
 		}
 		return name;
 	}
 
 	public void setName(String name) {
+		if(name == null){
+			return;
+		}
 		this.name = name;
 	}
 
 	public String getDescription() {
-		if(this.name == null){
-			return "";
+		if(this.description == null){
+			return "N/A";
 		}
 		return description;	
 	}
 
 	public void setDescription(String description) {
+		if(description == null){
+			return;
+		}
 		this.description = description;
 	}
 

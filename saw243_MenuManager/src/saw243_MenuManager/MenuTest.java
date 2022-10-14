@@ -12,7 +12,9 @@ public class MenuTest {
 		Dessert cheeseCake = new Dessert("Cheese Cake", "cake made from a mixture of cheese eggs and sugar", 257);
 		Menu firstMenu = new Menu("First Menu", chickenAndRice, avocadoSalad);
 		Menu secondMenu = new Menu("Second Menu", bonelessWings, caesarSalad, fries, cheeseCake);
-		System.out.println(firstMenu.getName() + ": " + "Total Calories: " + firstMenu.totalCalories() + ", " + firstMenu.description() + '\n' +secondMenu.getName() + ": " + "Total Calories: " + secondMenu.totalCalories() + ", " + secondMenu.description());
+		// System.out.println(firstMenu.getName() + ": " + "Total Calories: " + firstMenu.totalCalories() + ", " + firstMenu.description() + '\n' +secondMenu.getName() + ": " + "Total Calories: " + secondMenu.totalCalories() + ", " + secondMenu.description());
+		System.out.println(firstMenu.description());
+		System.out.println(secondMenu.description());
 	}
 
 }
