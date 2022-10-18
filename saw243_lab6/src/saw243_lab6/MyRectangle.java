@@ -33,11 +33,9 @@ public class MyRectangle {
 	}
 	public boolean isInside(int X, int Y) {
 		boolean inside = false;
-		if(startX > 0 && startY > 0) {
-			if(X <= (startX+width) && X >= startX && Y >= (startY) && Y <= startY+height) {
-				inside =  true;
-			}	
-		}
+		if(X <= (startX+width) && X >= startX && Y >= (startY) && Y <= startY+height) {
+			inside =  true;
+		}	
 		return inside;
 	}
 	public void setSize(int newWidth, int newHeight) {
