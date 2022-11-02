@@ -15,14 +15,14 @@ public class Menu {
 		dessert = null;
 	}
 
-	public Menu(String name, Entree entree, Salad salad) {
+	public Menu(String name, Entree entree, Side side) {
 		this.name = name;
 		this.entree = entree;
-		this.salad = salad;
-		side = null;
+		this.side = side;
+		salad = null;
 		dessert = null;
 	}
-	public Menu(String name, Entree entree, Salad salad, Side side, Dessert dessert) {
+	public Menu(String name, Entree entree, Side side, Salad salad, Dessert dessert) {
 		this.name = name;
 		this.entree = entree;
 		this.salad = salad;
@@ -30,6 +30,11 @@ public class Menu {
 		this.dessert = dessert;
 	}
 	public int totalCalories() {
+		/**
+		* Method totalCalories
+		* @parameter none
+		* @return total calories of the menu items
+		*/
 		int allCalories = 0;
 		if(entree !=null) {
 			allCalories += entree.getCalories();
@@ -49,16 +54,16 @@ public class Menu {
 	public String description() {
 		String allDescriptions = "";
 		if(entree !=null) {
-			allDescriptions += "Entree: " + entree.getDescription() + " ";
+			allDescriptions += "Entree: " + entree.getName() + ": " + entree.getDescription() + "\n";
 		}
 		if(side != null) {
-			allDescriptions += "Side: " + side.getDescription() + " ";
+			allDescriptions += "Side: " + side.getName() + ": " + side.getDescription() + "\n";
 		}
 		if(salad != null) {
-			allDescriptions += "Salad: " + salad.getDescription() + " ";
+			allDescriptions += "Salad: " + salad.getName() + ": " + salad.getDescription() + "\n";
 		}
 		if(dessert != null) {
-			allDescriptions += "Dessert: " + dessert.getDescription();
+			allDescriptions += "Dessert: " + dessert.getName() + ": " + dessert.getDescription();
 		}
 		return allDescriptions;
 	}

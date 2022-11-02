@@ -5,9 +5,19 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-
+/**
+ * Class FileManager
+ * @author : Sam
+ * @created: 10/28/2022
+ */
 public class FileManager {
+	
 	public static ArrayList<Entree> readEntrees(String filename){
+		/**
+		* Method create arraylists of entrees
+		* @parameter file name of the entrees
+		* @return arraylist of entrees
+		*/
 		ArrayList<Entree> ent = new ArrayList<Entree>();
 		try {
 			FileReader fr = new FileReader(filename);
@@ -41,6 +51,11 @@ public class FileManager {
 
 	
 	public static ArrayList<Side> readSides(String filename){
+		/**
+		* Method create arraylists of sides
+		* @parameter file name of the sides
+		* @return arraylist of sides
+		*/
 		ArrayList<Side> sid = new ArrayList<Side>();
 		try {
 			FileReader fr = new FileReader(filename);
@@ -72,6 +87,11 @@ public class FileManager {
 		
 	}
 	public static ArrayList<Salad> readSalads(String filename){
+		/**
+		* Method create arraylists of salads
+		* @parameter file name of the salads
+		* @return arraylist of sides
+		*/
 		ArrayList<Salad> sad = new ArrayList<Salad>();
 		try {
 			FileReader fr = new FileReader(filename);
@@ -103,6 +123,11 @@ public class FileManager {
 	
 	}
 	public static ArrayList<Dessert> readDesserts(String filename){
+		/**
+		* Method create arraylists of desserts
+		* @parameter file name of the desserts
+		* @return arraylist of desserts
+		*/
 		ArrayList<Dessert> des = new ArrayList<Dessert>();
 		try {
 			FileReader fr = new FileReader(filename);

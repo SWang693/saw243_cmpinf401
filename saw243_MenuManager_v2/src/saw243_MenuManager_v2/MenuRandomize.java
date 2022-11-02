@@ -64,7 +64,7 @@ public class MenuRandomize {
             int index = r.nextInt(desserts.size());
             d = desserts.get(index);
         }
-		Menu randomMenu = new Menu("yourRandomMenu", e, sS, s, d);
+		Menu randomMenu = new Menu("yourRandomMenu", e, s, sS, d);
 		return randomMenu;
 	}
 }
