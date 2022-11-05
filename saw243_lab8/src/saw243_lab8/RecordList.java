@@ -1,5 +1,9 @@
 package saw243_lab8;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class RecordList {
 	
 	/**
@@ -15,7 +19,7 @@ public class RecordList {
 		
 		/**
 		 * Creates a node with the given data
-		 * @param dataValue data to hold in this node
+		 * @pa       ram dataValue data to hold in this node
 		 */
 		public Node(Record dataValue) {
 			next = null;
@@ -61,15 +65,24 @@ public class RecordList {
 	 */
 	public int add(Record data) {
 		// Replace this with your own code. You can use the indexOf() method as a guide.
-		return 0;
 		
+		Node currentNode = head;
+		Node newNode = new Node(data);
+		int index = 0;
+		while (currentNode.next != null && (currentNode.next.data.getTime()<data.getTime()) ) {
+			currentNode = currentNode.next;
+			index++;
+		}
 		// traverse to place to insert node (i.e. get currentNode to be the one
 		// immediately before where we want to insert -- the last node with a strictly
 		// lower time)
-
+		newNode.next = currentNode.next;
+		currentNode.next = newNode;
+		
 		
 		// add new node in the spot we've found
 		
+		return index;
 	}
 	
 	/**
@@ -90,9 +103,23 @@ public class RecordList {
 	 * Write out the contents of the linked list to the given file, one entry per line
 	 * @param filename name of the file to write the list to
 	 */
-	public void writeToFile(String filename) {
-		// Add your own code here to write out the list contents to a file. You can use
-		// our file writing examples and the print() method above as a guide.
-	}
+//	public void writeToFile(String filename) {
+//		try {
+//			FileWriter fw = new FileWriter(filename);
+//			BufferedWriter bw = new BufferedWriter(fr);
+//			bw.write("This is a text file");
+//			bw.write("\n");
+//			bw.close();
+//			fw.close();
+//
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//		
+//		// Add your own code here to write out the list contents to a file. You can use
+//		// our file writing examples and the print() method above as a guide.
+//	}
 
 }

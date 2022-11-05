@@ -1,5 +1,9 @@
 package saw243_MenuManager_v2;
-
+/**
+ * Class Menu
+ * @author : Sam
+ * @created: 10/28/2022
+ */
 public class Menu {
 	private String name;
 	private Entree entree;	
@@ -52,6 +56,11 @@ public class Menu {
 		return allCalories;
 	}
 	public String description() {
+		/**
+		* Method name: description
+		* @parameter none
+		* @return all descriptions of food and their names
+		*/
 		String allDescriptions = "";
 		if(entree !=null) {
 			allDescriptions += "Entree: " + entree.getName() + ": " + entree.getDescription() + "\n";

@@ -22,7 +22,6 @@ public class MenuRandomize {
 		* @parameter dessertFile a string
 		* @return nothing
 		*/
-
 		this.entrees = FileManager.readEntrees(entreeFile);
 		this.sides = FileManager.readSides(sideFile);
 		this.salads = FileManager.readSalads(saladFile);
@@ -30,7 +29,7 @@ public class MenuRandomize {
 	}
 	public Menu randomMenu() {
 		/**
-		* Method create random menu
+		* Method name: randomMenu
 		* no parameters
 		* @returns a random menu
 		*/
