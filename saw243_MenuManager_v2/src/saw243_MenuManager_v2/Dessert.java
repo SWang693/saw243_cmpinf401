@@ -1,5 +1,9 @@
 package saw243_MenuManager_v2;
-
+/**
+ * Class Dessert
+ * @author : Sam
+ * @created: 10/11/2022
+ */
 public class Dessert {
 	
 	private String name;
@@ -26,14 +30,22 @@ public class Dessert {
 		}
 		this.name = name;
 	}
-
+	/**
+	* Method getDescription
+	* @parameter none
+	* @return description of dessert
+	*/
 	public String getDescription() {
 		if(this.description == null){
 			return "N/A";
 		}
 		return description;	
 	}
-
+	/**
+	* Method set Description
+	* @parameter description
+	* @return nothing
+	*/
 	public void setDescription(String description) {
 		if(description == null){
 			return;

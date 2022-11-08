@@ -33,6 +33,11 @@ public class Menu {
 		this.side = side;
 		this.dessert = dessert;
 	}
+	/**
+	* Method totalCalories
+	* @parameter none
+	* @return total calories in menu
+	*/
 	public int totalCalories() {
 		/**
 		* Method totalCalories

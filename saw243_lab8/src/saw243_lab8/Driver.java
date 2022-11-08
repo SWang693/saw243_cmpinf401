@@ -36,9 +36,8 @@ public class Driver {
 				list.print();
 			}
 		} while (input != null);
-
 		
-//		list.writeToFile("data\\recordList.txt");
+		list.writeToFile("data\\Records.txt");
 		
 		/* input = javax.swing.JOptionPane.showInputDialog("Enter the name of a participant to look up");
 		String name = input.trim();

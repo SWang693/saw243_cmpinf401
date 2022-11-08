@@ -78,9 +78,9 @@ public class RecordList {
 		// lower time)
 		newNode.next = currentNode.next;
 		currentNode.next = newNode;
-		
-		
 		// add new node in the spot we've found
+		
+		
 		
 		return index;
 	}
@@ -103,23 +103,27 @@ public class RecordList {
 	 * Write out the contents of the linked list to the given file, one entry per line
 	 * @param filename name of the file to write the list to
 	 */
-//	public void writeToFile(String filename) {
-//		try {
-//			FileWriter fw = new FileWriter(filename);
-//			BufferedWriter bw = new BufferedWriter(fr);
-//			bw.write("This is a text file");
-//			bw.write("\n");
-//			bw.close();
-//			fw.close();
-//
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		
-//		
-//		// Add your own code here to write out the list contents to a file. You can use
-//		// our file writing examples and the print() method above as a guide.
-//	}
+	public void writeToFile(String filename) {
+		try {
+			Node currentNode = head.next;
+			FileWriter fw = new FileWriter(filename);
+			BufferedWriter bw = new BufferedWriter(fw);
+			while(currentNode != null) {
+				bw.write(currentNode.data.getName() + "," + currentNode.data.getTime());
+				bw.newLine();
+				currentNode = currentNode.next;
+			}
+			bw.close();
+			fw.close();
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		// Add your own code here to write out the list contents to a file. You can use
+		// our file writing examples and the print() method above as a guide.
+	}
 
 }
