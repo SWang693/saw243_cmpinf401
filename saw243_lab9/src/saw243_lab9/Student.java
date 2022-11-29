@@ -37,7 +37,7 @@ public class Student extends Person{
 		this.fee = fee;
 	}
 	public String toString() {
-		return super.getName + " lives at " + super.getAddress() + " and is studying " + program + " in his/her " + year + " year while paying " + fee + " in tuition.";
+		return super.getName() + " lives at " + super.getAddress() + " and is studying " + program + " in his/her " + year + " year while paying " + fee + " in tuition.";
 	}
 
 }
