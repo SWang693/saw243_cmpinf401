@@ -23,7 +23,7 @@ public class FileManager {
 		/**
 		* Method: reads all types of dishes from a single file in which each line can be an entree, a side, a salad or a dessert
 		* @parameter file name of the the dishes
-		* @return arraylist of entrees
+		* @return arraylist of menu items
 		*/
 		ArrayList<MenuItem> ent = new ArrayList<MenuItem>();
 		try {
@@ -32,7 +32,7 @@ public class FileManager {
 			String line = null;
 			while ((line = br.readLine()) != null) {
 				String[] temp = line.split("@@");
-				if(temp.length == 4) {
+				if(temp.length == 5) {
 					if(temp[1] == "entree") {
 						Entree e = new Entree(temp[0],temp[2],Integer.parseInt(temp[3]),Double.parseDouble(temp[4]));
 						ent.add(e);

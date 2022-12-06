@@ -9,7 +9,6 @@ INDEX VERSION 1.131+C:\Users\Sam\Documents\GitHub\saw243_cmpinf401\.metadata\.pl
 2357111050.index
 4219050396.index
 177150799.index
-1096786614.index
 4229193093.index
 1138911441.index
 2380175872.index
