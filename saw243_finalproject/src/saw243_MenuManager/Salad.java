@@ -1,4 +1,4 @@
-package saw243_MenuManager_v3;
+package saw243_MenuManager;
 /**
  * Class Salad
  * @author : Sam

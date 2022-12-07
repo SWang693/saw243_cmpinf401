@@ -1,4 +1,4 @@
-package saw243_MenuManager_v3;
+package saw243_MenuManager;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,10 +8,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import saw243_MenuManager_v3.Dessert;
-import saw243_MenuManager_v3.Entree;
-import saw243_MenuManager_v3.Salad;
-import saw243_MenuManager_v3.Side;
+import saw243_MenuManager.Dessert;
+import saw243_MenuManager.Entree;
+import saw243_MenuManager.Salad;
+import saw243_MenuManager.Side;
 /**
  * Class FileManager
  * @author : Sam

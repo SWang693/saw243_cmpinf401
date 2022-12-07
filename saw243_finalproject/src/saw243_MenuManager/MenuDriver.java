@@ -1,4 +1,4 @@
-package saw243_MenuManager_v3;
+package saw243_MenuManager;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -6,10 +6,15 @@ import java.util.Scanner;
 public class MenuDriver {
 
 	public static void main(String[] args) {
+		// System.out.println("HERE");
 		// TODO Auto-generated method stub
-		ArrayList<Menu> menu = new ArrayList<Menu>();
-		MenuManager userTest = new MenuManager("data\\dishes.txt");
+		ArrayList<MenuItem> menuItemList = FileManager.readItems("data\\dishes.txt");
+		for(MenuItem m : menuItemList) {
+			System.out.println(m.getDescription());
+		}
+		// MenuManager userTest = new MenuManager("data\\dishes.txt");
 		
+		/*
 		Scanner myOBJ = new Scanner(System.in);
 		System.out.println("Please input the number of Menus that you would liek to create below: ");
 		int userInput = myOBJ.nextInt();
@@ -21,6 +26,7 @@ public class MenuDriver {
 			menu.add(testMenu);
 			FileManager.writeMenu("data\\swag.txt", menu);
 		}
+		*/
 		
 	}
 

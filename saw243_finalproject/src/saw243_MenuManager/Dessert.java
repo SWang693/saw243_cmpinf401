@@ -1,4 +1,4 @@
-package saw243_MenuManager_v3;
+package saw243_MenuManager;
 /**
  * Class Dessert
  * @author : Sam

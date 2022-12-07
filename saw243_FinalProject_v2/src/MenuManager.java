@@ -1,4 +1,4 @@
-package saw243_MenuManager_v3;
+
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -27,7 +27,7 @@ public class MenuManager extends FileManager{
 			}
 		}	
 	}
-	public static Menu randomMenu(String name) {
+	public Menu randomMenu(String name) {
 		/**
 		* Method name: randomMenu
 		* no parameters
@@ -164,28 +164,28 @@ public Menu maxCaloriesMenu(String name) {
 		Menu lowestCalories = new Menu(name, e, s, sS, d);
 		return lowestCalories;
 	}
-public static ArrayList<Entree> getEntrees() {
+public  ArrayList<Entree> getEntrees() {
 	return entrees;
 }
-public static void setEntrees(ArrayList<Entree> entrees) {
+public  void setEntrees(ArrayList<Entree> entrees) {
 	MenuManager.entrees = entrees;
 }
-public static ArrayList<Side> getSides() {
+public  ArrayList<Side> getSides() {
 	return sides;
 }
-public static void setSides(ArrayList<Side> sides) {
+public  void setSides(ArrayList<Side> sides) {
 	MenuManager.sides = sides;
 }
-public static ArrayList<Salad> getSalads() {
+public  ArrayList<Salad> getSalads() {
 	return salads;
 }
-public static void setSalads(ArrayList<Salad> salads) {
+public  void setSalads(ArrayList<Salad> salads) {
 	MenuManager.salads = salads;
 }
-public static ArrayList<Dessert> getDesserts() {
+public  ArrayList<Dessert> getDesserts() {
 	return desserts;
 }
-public static void setDesserts(ArrayList<Dessert> desserts) {
+public  void setDesserts(ArrayList<Dessert> desserts) {
 	MenuManager.desserts = desserts;
 }
 

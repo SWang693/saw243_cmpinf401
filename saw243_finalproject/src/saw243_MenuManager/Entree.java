@@ -1,16 +1,17 @@
-package saw243_MenuManager_v3;
+package saw243_MenuManager;
 /**
- * Class Side
+ * Class Entree
  * @author : Sam
  * @created: 10/11/2022
  */
-public class Side extends MenuItem{
+public class Entree extends MenuItem{
 	
 	private String name;
 	private String description;
 	private int calories;
 	
-	public Side(String name, String description, int calories, double price) {
+	
+	public Entree(String name, String description, int calories, double price) {
 		super(name, description, calories, price);
 		// TODO Auto-generated method stub
 	}
@@ -31,7 +32,7 @@ public class Side extends MenuItem{
 	/**
 	* Method getDescription
 	* @parameter none
-	* @return description of side
+	* @return description of entree
 	*/
 	public String getDescription() {
 		if(this.description == null){
@@ -41,7 +42,7 @@ public class Side extends MenuItem{
 	}
 	/**
 	* Method setDescription
-	* @parameter description of side
+	* @parameter desription
 	* @return none
 	*/
 	public void setDescription(String description) {
