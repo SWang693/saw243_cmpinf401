@@ -8,10 +8,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import saw243_MenuManager_v3.Dessert;
-import saw243_MenuManager_v3.Entree;
-import saw243_MenuManager_v3.Salad;
-import saw243_MenuManager_v3.Side;
 /**
  * Class FileManager
  * @author : Sam
@@ -20,10 +16,11 @@ import saw243_MenuManager_v3.Side;
 public class FileManager {
 	
 	public static ArrayList<MenuItem> readItems(String filename){
+		
 		/**
 		* Method: reads all types of dishes from a single file in which each line can be an entree, a side, a salad or a dessert
 		* @parameter file name of the the dishes
-		* @return arraylist of MenuItems
+		* @return arraylist of menu items
 		*/
 		ArrayList<MenuItem> ent = new ArrayList<MenuItem>();
 		try {
@@ -31,21 +28,24 @@ public class FileManager {
 			BufferedReader br = new BufferedReader(fr); 
 			String line = null;
 			while ((line = br.readLine()) != null) {
+				
 				String[] temp = line.split("@@");
 				if(temp.length == 5) {
-					if(temp[1] == "entree") {
+					// System.out.println(line);
+					if(temp[1].equalsIgnoreCase("entree")) {
 						Entree e = new Entree(temp[0],temp[2],Integer.parseInt(temp[3]),Double.parseDouble(temp[4]));
+						
 						ent.add(e);
 					}
-					if(temp[1] == "salad") {
+					else if(temp[1].equalsIgnoreCase("salad")) {
 						Salad s = new Salad(temp[0],temp[2],Integer.parseInt(temp[3]),Double.parseDouble(temp[4]));
 						ent.add(s);
 					}
-					if(temp[1] == "side") {
+					else if(temp[1].equalsIgnoreCase("side")) {
 						Side ss = new Side(temp[0],temp[2],Integer.parseInt(temp[3]),Double.parseDouble(temp[4]));
 						ent.add(ss);
 					}
-					if(temp[1] == "dessert") {
+					else if(temp[1].equalsIgnoreCase("dessert")) {
 						Dessert d = new Dessert(temp[0],temp[2],Integer.parseInt(temp[3]),Double.parseDouble(temp[4]));
 						ent.add(d);
 					}
@@ -76,7 +76,6 @@ public class FileManager {
 			int priceCounter = 0;
 			for(int i = 0; i < menus.size(); i++) {
 				// priceCounter += menus.get(i).
-				priceCounter += menus.get(i).getEntree().getPrice();
 				if(menus.get(i).getSalad() != null) {
 					priceCounter += menus.get(i).getSalad().getPrice();
 				}
@@ -92,9 +91,9 @@ public class FileManager {
 				br.write(menus.get(i).getName() + ": " + menus.get(i).description() + " totalCalories: " + menus.get(i).totalCalories());
 				br.write(" total price is " + priceCounter);
 			}
-			
-			fr.close();
 			br.close();
+			fr.close();
+			
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

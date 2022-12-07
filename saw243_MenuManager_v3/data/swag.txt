@@ -1,0 +1,4 @@
+Random Menu : Entree: Curry Chicken: Curry marinated chicken, cooked slowly in wood fire oven is price of 11.5 and has this many calories: 430
+Side: Rice: Plain rice is price of 3.5 and has this many calories: 160
+Salad: Quinoa: Quinoa lightly salted is price of 4.0 and has this many calories: 120
+Dessert: Chocolate Cake: Low calorie chocolate cake is price of 7.0 and has this many calories: 175 totalCalories: 885 total price is 25
