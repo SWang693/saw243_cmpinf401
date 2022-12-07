@@ -58,8 +58,12 @@ public class MenuManagerGUI{
 		createMenu.setBounds(300, 20, 150, 30);
 		mainFrame.getContentPane().add(createMenu);
 		
+		field = new JTextField("");
+		field.setBounds(300, 300, 200, 200);
+		mainFrame.getContentPane().add(field);
+		
 		entreeBox = new JComboBox(menu.getEntrees().toArray()); 
-		entreeBox.setBounds(20, 140, 150, 30);
+		entreeBox.setBounds(150, 70, 300, 50);
 		mainFrame.getContentPane().add(entreeBox);
 		
 		sideBox = new JComboBox(menu.getSides().toArray()); 

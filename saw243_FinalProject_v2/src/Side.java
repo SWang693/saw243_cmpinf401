@@ -6,9 +6,7 @@
  */
 public class Side extends MenuItem{
 	
-	private String name;
-	private String description;
-	private int calories;
+
 	
 	public Side(String name, String description, int calories, double price) {
 		super(name, description, calories, price);

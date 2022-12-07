@@ -6,9 +6,6 @@
  */
 public class Salad extends MenuItem{
 	
-	private String name;
-	private String description;
-	private int calories;
 	
 	public Salad(String name, String description, int calories, double price) {
 		super(name, description, calories, price);

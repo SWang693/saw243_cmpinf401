@@ -6,11 +6,7 @@
  */
 public class Entree extends MenuItem{
 	
-	private String name;
-	private String description;
-	private int calories;
-	
-	
+
 	public Entree(String name, String description, int calories, double price) {
 		super(name, description, calories, price);
 		// TODO Auto-generated method stub
