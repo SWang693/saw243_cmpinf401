@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class MenuManager extends FileManager{
-	private ArrayList<Entree> entrees;
-	private ArrayList<Side> sides;
-	private ArrayList<Salad> salads;
-	private ArrayList<Dessert> desserts;
+	private static ArrayList<Entree> entrees = new ArrayList<Entree>();;
+	private static ArrayList<Side> sides = new ArrayList<Side>();
+	private static ArrayList<Salad> salads = new ArrayList<Salad>();
+	private static ArrayList<Dessert> desserts = new ArrayList<Dessert>();
 	
 	public MenuManager(String dishesFile) {
 		ArrayList<MenuItem> men = readItems(dishesFile);
+
 		for(int i = 0; i < men.size(); i++) {
 			if(men.get(i) instanceof Entree) {
 				entrees.add((Entree) men.get(i));
@@ -26,7 +27,7 @@ public class MenuManager extends FileManager{
 			}
 		}	
 	}
-	public Menu randomMenu(String name) {
+	public static Menu randomMenu(String name) {
 		/**
 		* Method name: randomMenu
 		* no parameters
@@ -163,30 +164,31 @@ public Menu maxCaloriesMenu(String name) {
 		Menu lowestCalories = new Menu(name, e, s, sS, d);
 		return lowestCalories;
 	}
-	public ArrayList<Entree> getEntrees() {
-		return entrees;
-	}
-	public void setEntrees(ArrayList<Entree> entrees) {
-		this.entrees = entrees;
-	}
-	public ArrayList<Side> getSides() {
-		return sides;
-	}
-	public void setSides(ArrayList<Side> sides) {
-		this.sides = sides;
-	}
-	public ArrayList<Salad> getSalads() {
-		return salads;
-	}
-	public void setSalads(ArrayList<Salad> salads) {
-		this.salads = salads;
-	}
-	public ArrayList<Dessert> getDesserts() {
-		return desserts;
-	}
-	public void setDesserts(ArrayList<Dessert> desserts) {
-		this.desserts = desserts;
-	}
+public static ArrayList<Entree> getEntrees() {
+	return entrees;
+}
+public static void setEntrees(ArrayList<Entree> entrees) {
+	MenuManager.entrees = entrees;
+}
+public static ArrayList<Side> getSides() {
+	return sides;
+}
+public static void setSides(ArrayList<Side> sides) {
+	MenuManager.sides = sides;
+}
+public static ArrayList<Salad> getSalads() {
+	return salads;
+}
+public static void setSalads(ArrayList<Salad> salads) {
+	MenuManager.salads = salads;
+}
+public static ArrayList<Dessert> getDesserts() {
+	return desserts;
+}
+public static void setDesserts(ArrayList<Dessert> desserts) {
+	MenuManager.desserts = desserts;
+}
+
 	
 	
 }

@@ -76,7 +76,6 @@ public class FileManager {
 			int priceCounter = 0;
 			for(int i = 0; i < menus.size(); i++) {
 				// priceCounter += menus.get(i).
-				priceCounter += menus.get(i).getEntree().getPrice();
 				if(menus.get(i).getSalad() != null) {
 					priceCounter += menus.get(i).getSalad().getPrice();
 				}
@@ -92,9 +91,9 @@ public class FileManager {
 				br.write(menus.get(i).getName() + ": " + menus.get(i).description() + " totalCalories: " + menus.get(i).totalCalories());
 				br.write(" total price is " + priceCounter);
 			}
-			
-			fr.close();
 			br.close();
+			fr.close();
+			
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

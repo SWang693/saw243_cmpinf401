@@ -13,9 +13,10 @@ public class MenuManagerGUI {
 	private JButton button;
 	private JComboBox entreeBox;
 	private JTextField field;
+	private MenuManager menu;
 	
 	public MenuManagerGUI() {
-		MenuManager menu = new MenuManager("data\\dishes.txt");
+		menu = new MenuManager("data\\dishes.txt");
 		buildMainMenuWindow();
 	}
 	private void buildMainMenuWindow() {
@@ -49,7 +50,7 @@ public class MenuManagerGUI {
 		lblDessert.setBounds(20, 190, 150, 30);
 		mainFrame.getContentPane().add(lblDessert);
 		
-		entreeBox = new JComboBox(menu.getEntrees().toArray()); 
+		entreeBox = new JComboBox<Entree>((Entree[]) menu.getEntrees().toArray()); 
 		entreeBox.setBounds(20, 140, 150, 30);
 		mainFrame.getContentPane().add(entreeBox);
 		

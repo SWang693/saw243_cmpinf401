@@ -23,7 +23,7 @@ public class FileManager {
 		/**
 		* Method: reads all types of dishes from a single file in which each line can be an entree, a side, a salad or a dessert
 		* @parameter file name of the the dishes
-		* @return arraylist of entrees
+		* @return arraylist of MenuItems
 		*/
 		ArrayList<MenuItem> ent = new ArrayList<MenuItem>();
 		try {
