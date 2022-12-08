@@ -25,7 +25,7 @@ public class MenuManagerGUI{
 	}
 	private void buildMainMenuWindow() {
 		mainFrame = new JFrame("Menu Manager");
-		mainFrame.setBounds(100, 100, 500, 600);
+		mainFrame.setBounds(100, 100, 600, 600);
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainFrame.getContentPane().setLayout(null);
 		mainFrame.setVisible(true);
@@ -59,23 +59,23 @@ public class MenuManagerGUI{
 		mainFrame.getContentPane().add(createMenu);
 		
 		field = new JTextField("");
-		field.setBounds(300, 300, 200, 200);
+		field.setBounds(275, 225, 200, 200);
 		mainFrame.getContentPane().add(field);
 		
 		entreeBox = new JComboBox(menu.getEntrees().toArray()); 
-		entreeBox.setBounds(150, 70, 300, 50);
+		entreeBox.setBounds(300, 55, 120, 30);
 		mainFrame.getContentPane().add(entreeBox);
 		
 		sideBox = new JComboBox(menu.getSides().toArray()); 
-		sideBox.setBounds(20, 140, 150, 30);
+		sideBox.setBounds(300, 100, 120, 30);
 		mainFrame.getContentPane().add(sideBox);
 		
 		saladBox = new JComboBox(menu.getSalads().toArray()); 
-		saladBox.setBounds(20, 140, 150, 30);
+		saladBox.setBounds(300, 140, 120, 30);
 		mainFrame.getContentPane().add(saladBox);
 		
 		dessertBox = new JComboBox(menu.getDesserts().toArray()); 
-		dessertBox.setBounds(20, 140, 150, 30);
+		dessertBox.setBounds(300, 140, 120, 30);
 		mainFrame.getContentPane().add(dessertBox);
 		
 		
