@@ -1,4 +1,4 @@
-package saw243_MenuManager;
+
 /**
  * Class Menu
  * @author : Sam
@@ -59,6 +59,28 @@ public class Menu {
 		}
 		// int allCalories = entree.getCalories() + side.getCalories() + salad.getCalories() + dessert.getCalories();
 		return allCalories;
+	}
+	public int totalPrice() {
+		/**
+		* Method totalCalories
+		* @parameter none
+		* @return total calories of the menu items
+		*/
+		int allprices = 0;
+		if(entree !=null) {
+			allprices += entree.getPrice();
+		}
+		if(side != null) {
+			allprices += side.getPrice();
+		}
+		if(salad != null) {
+			allprices += salad.getPrice();
+		}
+		if(dessert != null) {
+			allprices += dessert.getPrice();
+		}
+		// int allCalories = entree.getCalories() + side.getCalories() + salad.getCalories() + dessert.getCalories();
+		return allprices;
 	}
 	public String description() {
 		/**
