@@ -20,6 +20,7 @@ import saw243_MenuManager.Side;
 public class FileManager {
 	
 	public static ArrayList<MenuItem> readItems(String filename){
+		
 		/**
 		* Method: reads all types of dishes from a single file in which each line can be an entree, a side, a salad or a dessert
 		* @parameter file name of the the dishes
@@ -31,21 +32,24 @@ public class FileManager {
 			BufferedReader br = new BufferedReader(fr); 
 			String line = null;
 			while ((line = br.readLine()) != null) {
+				
 				String[] temp = line.split("@@");
 				if(temp.length == 5) {
-					if(temp[1] == "entree") {
+					// System.out.println(line);
+					if(temp[1].equalsIgnoreCase("entree")) {
 						Entree e = new Entree(temp[0],temp[2],Integer.parseInt(temp[3]),Double.parseDouble(temp[4]));
+						
 						ent.add(e);
 					}
-					if(temp[1] == "salad") {
+					else if(temp[1].equalsIgnoreCase("salad")) {
 						Salad s = new Salad(temp[0],temp[2],Integer.parseInt(temp[3]),Double.parseDouble(temp[4]));
 						ent.add(s);
 					}
-					if(temp[1] == "side") {
+					else if(temp[1].equalsIgnoreCase("side")) {
 						Side ss = new Side(temp[0],temp[2],Integer.parseInt(temp[3]),Double.parseDouble(temp[4]));
 						ent.add(ss);
 					}
-					if(temp[1] == "dessert") {
+					else if(temp[1].equalsIgnoreCase("dessert")) {
 						Dessert d = new Dessert(temp[0],temp[2],Integer.parseInt(temp[3]),Double.parseDouble(temp[4]));
 						ent.add(d);
 					}
@@ -89,7 +93,7 @@ public class FileManager {
 					priceCounter += menus.get(i).getSide().getPrice();
 				}
 				br.write(menus.get(i).getName() + ": " + menus.get(i).description() + " totalCalories: " + menus.get(i).totalCalories());
-				br.write(" total price is " + priceCounter);
+				br.write(" total price is " + priceCounter + "\n");
 			}
 			br.close();
 			fr.close();
@@ -101,6 +105,3 @@ public class FileManager {
 		}
 		
 	}
-
-
-}
