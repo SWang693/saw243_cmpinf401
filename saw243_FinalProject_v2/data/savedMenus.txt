@@ -1,0 +1,4 @@
+hi: Entree: Sirloin Steak: A delicious piece of 1/2 a pound of our carefully selected meat grilled and seasoned. Choose how much you want it cooked is price of 22.5 and has this many calories: 820
+Side: Rice: Plain rice is price of 3.5 and has this many calories: 160
+Salad: Mixed Vegetables: Includes small tomatoes, lettuce, cucumber, spinach and arugula is price of 7.0 and has this many calories: 90
+Dessert: Ice Cream: Choose among vanilla, mango, pineapple, chocolate and orange ice cream is price of 3.2 and has this many calories: 250 totalCalories: 1320 total price is 35
